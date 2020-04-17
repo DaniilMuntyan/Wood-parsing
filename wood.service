@@ -1,0 +1,11 @@
+
+[Unit]
+Description=Wood parsing
+After=multi-user.target
+ 
+[Service]
+Type=idle
+ExecStart=/home/daniilmuntjan/anaconda3/envs/myenv/bin/python /home/daniilmuntjan/Parsing/wood_parse.py
+ 
+[Install]
+WantedBy=multi-user.target

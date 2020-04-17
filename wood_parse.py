@@ -40,7 +40,7 @@ def set_url_list(name_thr, url_list, a, b):
                 d = {'Name': name, 'Activities': activities.replace('\n', '').replace('\t', '').replace('Activities:', ''),
                      'Reply rate': reply_rate, 'Employees': employees.strip(), 'Phone number': number, 'Url': "https://timber.fordaq.com" + url_href}
                 s += str(d) + '\n'
-            if (i - a) % 1 == 0 or i == b - 1:
+            if (i - a) % 10000 == 0 or i == b - 1:
                 print_to('companies.txt', s)
                 s = ""
         except BaseException as err:
